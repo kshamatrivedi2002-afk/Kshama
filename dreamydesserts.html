@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Desserts - Eggless Baking Classes</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for aesthetic vectors --><script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for the sweet, inviting feel */
+        :root {
+            --primary-color: #f9a8d4; /* Pink - A sweet baking color */
+            --secondary-color: #fef3c7; /* Light Yellow/Cream */
+            --dark-text: #4c1d95; /* Deep Purple for contrast */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--dark-text);
+            padding-top: 60px; /* Space for fixed header */
+        }
+        .text-primary { color: var(--primary-color); }
+        .bg-primary { background-color: var(--primary-color); }
+        .text-dark { color: var(--dark-text); }
+        .shadow-sweet {
+            box-shadow: 0 10px 15px -3px rgba(249, 168, 212, 0.5), 0 4px 6px -2px rgba(249, 168, 212, 0.3);
+        }
+        .card {
+            background-color: white;
+            border-radius: 1.5rem; /* More rounded */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button {
+            background-color: #059669; /* Green for action/WhatsApp */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #047857;
+        }
+
+        /* Responsive layout tweaks */
+        @media (min-width: 640px) {
+            .container {
+                max-width: 800px;
+            }
+        }
+    </style>
+    <script>
+        // Simple function to dynamically insert icons
+        function loadIcons() {
+            lucide.createIcons();
+        }
+
+        // Function for the "Contact Now" button (using the updated number)
+        function contactNow() {
+            const phoneNumber = '+919712977553'; 
+            const message = 'Hello Dreamy Desserts! I am interested in joining your baking classes.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        window.onload = loadIcons;
+    </script>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navigation Bar (Sticky Top) --><nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center max-w-4xl">
+            <a href="#top" class="text-xl font-bold text-pink-500 hidden sm:block">Dreamy Desserts</a>
+            <div class="flex space-x-4 mx-auto sm:mx-0">
+                <a href="#courses" class="text-sm font-medium text-dark hover:text-pink-500 transition">Classes</a>
+                <a href="#usp" class="text-sm font-medium text-dark hover:text-pink-500 transition">Why Us?</a>
+                <a href="#icing" class="text-sm font-medium text-dark hover:text-pink-500 transition">Learn</a>
+                <a href="#contact" class="text-sm font-medium text-dark hover:text-pink-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navigation Bar --><div class="container mx-auto px-4 py-8">
+
+        <!-- Header Section --><header id="top" class="text-center mb-10 p-6 bg-white rounded-xl shadow-sweet">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-dark tracking-tight">
+                <i data-lucide="cake" class="inline-block w-8 h-8 mr-2 text-primary align-text-bottom"></i>
+                Dreamy Desserts
+            </h1>
+            <p class="mt-2 text-xl sm:text-2xl text-pink-500 font-semibold">
+                Your Home for Eggless Baking Classes!
+            </p>
+        </header>
+
+        <!-- CTA and USP Section --><section id="usp" class="mb-12">
+            <div class="text-center p-6 bg-primary rounded-xl shadow-sweet">
+                <h2 class="text-3xl font-bold text-white mb-4">Ready to Bake?</h2>
+                <button onclick="contactNow()" class="cta-button shadow-lg hover:shadow-xl transition duration-300">
+                    <i data-lucide="message-circle" class="inline-block w-5 h-5 mr-2 align-text-top"></i>
+                    Contact Now to Book!
+                </button>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                <div class="card p-4">
+                    <i data-lucide="egg-off" class="w-8 h-8 mx-auto mb-2 text-pink-500"></i>
+                    <p class="font-bold text-lg">100% Eggless</p>
+                    <p class="text-sm text-gray-500">Delicious results guaranteed.</p>
+                </div>
+                <div class="card p-4">
+                    <i data-lucide="graduation-cap" class="w-8 h-8 mx-auto mb-2 text-pink-500"></i>
+                    <p class="font-bold text-lg">Easiest Method</p>
+                    <p class="text-sm text-gray-500">Simple, step-by-step instruction.</p>
+                </div>
+                <div class="card p-4">
+                    <i data-lucide="indian-rupee" class="w-8 h-8 mx-auto mb-2 text-pink-500"></i>
+                    <p class="font-bold text-lg">Lowest Price</p>
+                    <p class="text-sm text-gray-500">Affordable classes for everyone.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Course Offerings Section --><section id="courses" class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-6 border-b-4 border-pink-300 pb-2">Our Class Menu</h2>
+
+            <div class="space-y-6">
+
+                <!-- 1. Cakes Class --><div class="card">
+                    <h3 class="text-2xl font-semibold mb-2 flex items-center">
+                        <i data-lucide="chef-hat" class="w-6 h-6 mr-3 text-pink-500"></i>
+                        Classic & Designer Cakes
+                    </h3>
+                    <p class="text-gray-600 mb-4">Master the foundations of professional cake baking, from basic sponges to layered masterpieces.</p>
+                    <ul class="list-disc list-inside text-gray-700 ml-4">
+                        <li>Basic Sponge & Flavor Variations</li>
+                        <li>Fresh Cream Icing & Decoration</li>
+                        <li>Totally Eggless Recipes</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Cupcakes & Brownies Class --><div class="card">
+                    <h3 class="text-2xl font-semibold mb-2 flex items-center">
+                        <i data-lucide="cup-cake" class="w-6 h-6 mr-3 text-pink-500"></i>
+                        Cupcakes, Brownies & More
+                    </h3>
+                    <p class="text-gray-600 mb-4">Learn quick, high-demand desserts perfect for parties and gifting.</p>
+                    <ul class="list-disc list-inside text-gray-700 ml-4">
+                        <li>Variety of Cupcake Bases</li>
+                        <li>Chocolate Fudge Brownies (Fudgy & Chewy)</li>
+                        <li>Different Frostings (Buttercream, Ganache)</li>
+                        <li>Piping Techniques for beautiful swirls</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Jar Cakes Class --><div class="card">
+                    <h3 class="text-2xl font-semibold mb-2 flex items-center">
+                        <i data-lucide="jar-with-lid" class="w-6 h-6 mr-3 text-pink-500"></i>
+                        Trendy Jar Cakes
+                    </h3>
+                    <p class="text-gray-600 mb-4">Perfect for quick sales and easy consumption! Learn how to layer and present desserts in jars.</p>
+                    <ul class="list-disc list-inside text-gray-700 ml-4">
+                        <li>Chocolate & Vanilla Jar Cake Recipes</li>
+                        <li>Layering & Presentation Skills</li>
+                        <li>Shelf Life & Storage Tips</li>
+                        <li>Quick dessert ideas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect / Icing Section --><section id="icing" class="mb-12 p-6 bg-pink-100 rounded-xl shadow-inner">
+            <h2 class="text-3xl font-bold text-center mb-4 text-pink-700">What You Will Learn</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-1 text-dark flex items-center">
+                        <i data-lucide="aperture" class="w-5 h-5 mr-2 text-pink-500"></i>
+                        Baking Skills
+                    </h3>
+                    <p class="text-gray-600">Understand ingredients, correct mixing techniques, and how to achieve a perfectly moist, fluffy sponge every time.</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-1 text-dark flex items-center">
+                        <i data-lucide="paint-roller" class="w-5 h-5 mr-2 text-pink-500"></i>
+                        Icing & Decoration
+                    </h3>
+                    <p class="text-gray-600">Learn to make stable, fresh cream icing and multiple decorative piping and finishing techniques for a professional look.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact Info --><footer id="contact" class="text-center pt-8 border-t-2 border-pink-200">
+            <h3 class="text-2xl font-bold mb-2 text-pink-600">Book Your Spot Today!</h3>
+            <p class="text-lg mb-4">Classes are held at: <span class="font-semibold text-dark">Ahmedabad, Ankur road, Naranpura</span>.</p>
+            
+            <a href="tel:+919712977553" class="inline-flex items-center text-dark hover:text-pink-600 transition mb-2">
+                <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                Call: **+91 97129 77553**
+            </a>
+            <br>
+            <a href="https://instagram.com/dreamy_desserts26" target="_blank" class="inline-flex items-center text-dark hover:text-pink-600 transition">
+                <i data-lucide="instagram" class="w-5 h-5 mr-2"></i>
+                Instagram: **dreamy_desserts26**
+            </a>
+            
+            <p class="text-xs mt-6 text-gray-500">© 2025 Dreamy Desserts. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
